@@ -1,0 +1,18 @@
+<div class="navbar-lewagon d-flex justify-content-between align-items-center px-3">
+	<div class="title">
+		<%= link_to cocktails_path do %>
+			<h2>Mr. Cocktails	</h2>
+		<% end %>
+	</div>
+	<div class="search-create d-flex justify-content-between">
+		<div class="search d-flex">
+			<%= form_tag(cocktails_path, { class: 'row d-flex' }) do %>
+				<%= text_field_tag :name, '', class: 'form-control col-9', placeholder: 'Search ingredient' %>
+				<%= submit_tag 'Search', class: 'form-control col-3' %>
+			<% end %>
+		</div>
+		<div class="create">
+			<%= link_to 'Add cocktail', new_cocktail_path %>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+	<h1>Cocktails</h1>
+	<div class="card">
+		<% if @cocktails.empty? %>
+			<p>
+				There are no cocktails yet.
+				<%= link_to 'Add a cocktail!', new_cocktail_path %>
+			</p>
+		<% else %>
+			<% @cocktails.each do |cocktail| %>
+				<%= link_to cocktail_path(cocktail) do %>
+					<h3><%= cocktail.name %></h3>
+				<% end %>
+				<small>Ingredients: <%= cocktail.ingredients.length %></small>
+			<% end %>
+		<% end %>
+	</div>
+</div>

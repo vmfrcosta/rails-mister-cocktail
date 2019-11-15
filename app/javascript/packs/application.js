@@ -15,5 +15,10 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import 'bootstrap';
+import 'select2/dist/css/select2.css';
 
+import { initSelect2 } from '../components/init_select2';
+
+initSelect2();
+$("#modal-window").html("<%= escape_javascript(render 'project/new_release') %>");
 console.log('Hello World from Webpacker')
