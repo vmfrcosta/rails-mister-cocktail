@@ -1,18 +1,18 @@
 <div class="navbar d-flex justify-content-between align-items-center px-3">
 	<div class="home">
-		<%= link_to cocktails_path do %>
-			<h2>Mr. Cocktails	</h2>
+		<%= link_to cocktails_path, class: 'app-name' do %>
+			<h2>Mr. Cocktails</h2>
 		<% end %>
 	</div>
-	<div class="search-create d-flex justify-content-between">
+	<div class="search-create d-flex justify-content-around align-items-center">
 		<div class="search d-flex">
 			<%= form_tag(cocktails_path, { class: 'row d-flex align-items-center' }) do %>
 				<%= select_tag :name, options_for_select(Ingredient.all.map{ |ing| ing.name}), { class: 'form-control col-9 select2', placeholder: 'Search ingredient' } %>
-				<%= submit_tag 'Search', class: 'form-control col-3 ml-2' %>
+				<%= submit_tag 'Search', class: 'btn-search col-3 ml-2' %>
 			<% end %>
 		</div>
 		<div class="create">
-			<%= link_to 'Add cocktail', new_cocktail_path %>
+			<%= link_to 'Add cocktail', new_cocktail_path, class: 'btn-add' %>
 		</div>
 	</div>
 </div>
