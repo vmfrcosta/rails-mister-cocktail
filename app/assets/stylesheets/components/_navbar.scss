@@ -14,3 +14,15 @@
 .search-create {
 	width: 400px;
 }
+
+.navbar {
+	border-bottom: 2px solid white;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+
+.navbar .home a {
+	text-decoration: none;
+	color: white;
+}

@@ -1,6 +1,6 @@
-<div class="container">
-	<h1>Cocktails</h1>
-	<div class="card">
+<div class="container mt-3 cocktails">
+	<h1 class="title">Select your cocktail</h1>
+	<div class="d-flex row">
 		<% if @cocktails.empty? %>
 			<p>
 				There are no cocktails yet.
@@ -9,9 +9,10 @@
 		<% else %>
 			<% @cocktails.each do |cocktail| %>
 				<%= link_to cocktail_path(cocktail) do %>
-					<h3><%= cocktail.name %></h3>
+					<div class="">
+						<%= cocktail.name %>
+					</div>
 				<% end %>
-				<small>Ingredients: <%= cocktail.ingredients.length %></small>
 			<% end %>
 		<% end %>
 	</div>
